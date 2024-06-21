@@ -17,12 +17,19 @@
         <h1 class="text-4xl text-blue-500 font-medium">Register</h1>
         <h1 class="text-2xl mt-5 text-blue-500 font-medium">Please register to continue</h1>
         <div>
-          <form action="action_page.php" class="mt-2 mr-5 rounded-lg ">
+          <form action="{{ url('registerAdmin') }}" method="POST" class="mt-2 mr-5 rounded-lg ">
+            @csrf
             <div>
               <input type="text" placeholder="Username" name="username" class="w-96 h-12 pl-3 mt-3 rounded outline outline-1 outline-gray-500">
             </div>
             <div>
-              <input type="text" placeholder="Asal" name="Asal" class="w-96 h-12 pl-3 mt-6 tex rounded outline outline-1 outline-gray-500">
+              <input type="text" placeholder="Email" name="email" class="w-96 h-12 pl-3 mt-6 tex rounded outline outline-1 outline-gray-500">
+            </div>
+            <div>
+              <input type="number" placeholder="Phonenumber" name="phonenumber" class="w-96 h-12 pl-3 mt-6 tex rounded outline outline-1 outline-gray-500">
+            </div>
+            <div>
+              <input type="text" placeholder="Description" name="description" class="w-96 h-12 pl-3 mt-6 tex rounded outline outline-1 outline-gray-500">
             </div>
             <div>
               <input type="text" placeholder="Password" name="password" class="w-96 h-12 pl-3 mt-6 rounded outline outline-1 outline-gray-500">
